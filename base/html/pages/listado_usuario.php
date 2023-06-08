@@ -84,10 +84,10 @@ $motivo_visita_list = get_motivo_visita_list();*/
                     <thead>
                       <tr class="col-xl-12">
                         <th class="col-1" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="persist">Id Usuario</th>
-                        <th class="col-2" data-tablesaw-sortable-col data-tablesaw-priority="">Nombres</th>
-                        <th class="col-2" data-tablesaw-sortable-col data-tablesaw-priority="">Apellidos</th>
+                        <th class="col-1" data-tablesaw-sortable-col data-tablesaw-priority="">Nombres</th>
+                        <th class="col-1" data-tablesaw-sortable-col data-tablesaw-priority="">Apellidos</th>
                         <th class="col-3"data-tablesaw-sortable-col data-tablesaw-priority="">Correo</th>
-                        <th class="col-2"data-tablesaw-sortable-col data-tablesaw-priority="">Rol</th>
+                        <th class="col-1"data-tablesaw-sortable-col data-tablesaw-priority="">Rol</th>
                         <th class="col-1"data-tablesaw-sortable-col data-tablesaw-priority="">Usuario</th>
                         <th class="col-2"data-tablesaw-sortable-col data-tablesaw-priority="">Detalle</th>
 

@@ -34,8 +34,9 @@ if($_POST){
  $tiempo=$_POST['tiempo_revision_pagina'];
  $creado_por=$_POST['id_creado_por'];
  $actualizado_por=$_POST['id_actualizado_por'];
+ $estatus_pagina=$_POST['activar'];
 
-   actualizar_pagina($url,$nombre_pagina,$tiempo,$creado_por,$actualizado_por,$id_pagina_web);
+   actualizar_pagina($url,$nombre_pagina,$tiempo,$creado_por,$actualizado_por,$id_pagina_web,$estatus_pagina);
 
    //guardar_bitacora($estado_ticket,$creado_por, $aplicaciones,$id_ticket_usuario);
 
@@ -157,7 +158,7 @@ $motivo_visita_list = get_motivo_visita_list();*/
                                                                                                                     
                                                                                                 
                                                                 <div class="form-group form-material">
-                                                                <!--<label class="form-control-label">Inactivar Usuario</label>
+                                                                <label class="form-control-label">Inactivar Pagina</label>
                                                                 <div>
                                                                     <div class="radio-custom radio-default radio-inline">
                                                                     <input type="radio" id="inputBasicMale" name="activar"checked value="1" />
@@ -167,7 +168,7 @@ $motivo_visita_list = get_motivo_visita_list();*/
                                                                     <input type="radio" id="inputBasicFemale" name="activar" value="0"  />
                                                                     <label for="inputBasicFemale">Inactivo</label>
                                                                 </div>
-                                                                </div>-->
+                                                                </div>
                                                                 </div>
                                                                 <div hidden class="form-group form-material col-md-6">
                                                                 <label class="form-control-label" for="inputBasicFirstName">Actualizado por</label>

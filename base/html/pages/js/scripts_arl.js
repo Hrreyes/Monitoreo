@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
   var defaults = Plugin.getDefaults("dataTable");
@@ -107,11 +106,24 @@ $.ajax({
           console.log("aqui lo imprime", response ,textStatus, jqXHR);
           // La solicitud fue exitosa
           if (jqXHR.status === 200) {
-            console.log('La URL', url, 'está arriba');
+            if (response.includes("net :: ERR_FAILED 200")) {
+              // El mensaje está presente en la respuesta
+              var divElement=$('#'+id);
+              divElement.removeClass('bg-green-400');
+              if (!divElement.hasClass('bg-red-400')) { // Verifica si el elemento no tiene la clase deseada
+              divElement.addClass('bg-red-400'); // Agrega la clase al elemento
+            }
+              console.log("La página devuelve el mensaje de bloqueo.");
+            } else {
+              // El mensaje no está presente en la respuesta
+              console.log("La página no devuelve el mensaje de bloqueo.");
+            }
+          
           } else {
             console.log('La URL', url, 'no está arriba');
           }
         },
+  
         statusCode: {
           400: function error() {
             var divElement=$('#'+id);
@@ -172,6 +184,19 @@ $.ajax({
             divElement.removeClass('bg-red-400');
             if (!divElement.hasClass('bg-green-400')) { // Verifica si el elemento no tiene la clase deseada
               divElement.addClass('bg-green-400'); // Agrega la clase al elemento
+              
+            }
+            if (response.includes("header is present on the requested resource.")) {
+              // El mensaje está presente en la respuesta
+              var divElement=$('#'+id);
+              divElement.removeClass('bg-green-400');
+              if (!divElement.hasClass('bg-red-400')) { // Verifica si el elemento no tiene la clase deseada
+              divElement.addClass('bg-red-400'); // Agrega la clase al elemento
+            }
+              console.log("La página devuelve el mensaje de bloqueo.");
+              } else {
+              // El mensaje no está presente en la respuesta
+              console.log("La página no devuelve el mensaje de bloqueo.");
             }
             enviar_datos(200,id);
             //console.log('La URL', url, 'devolvió un código de estado 503');

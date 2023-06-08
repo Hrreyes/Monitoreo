@@ -94,12 +94,12 @@ $motivo_visita_list = get_motivo_visita_list();*/
                     data-tablesaw-sortable data-tablesaw-sortable-switch data-tablesaw-minimap
                     data-tablesaw-mode-switch id="TableTools-arl-2">
                     <thead>
-                      <tr class="col-xl-12">
+                      <tr class="col-12">
                         <th class="col-1" data-tablesaw-sortable-col data-tablesaw-sortable-default-col data-tablesaw-priority="persist">Codigo</th>
                         <th class="col-1" data-tablesaw-sortable-col data-tablesaw-priority="">Url</th>
                         <th class="col-1" data-tablesaw-sortable-col data-tablesaw-priority="">Pagina</th>
                         <th class="col-1" data-tablesaw-sortable-col data-tablesaw-priority="">Tiempo Monitoreo</th>
-                        <th class="col-1"data-tablesaw-sortable-col data-tablesaw-priority="">Fecha Monitoreo</th>
+                        <th class="col-1" data-tablesaw-sortable-col data-tablesaw-priority="">Fecha Monitoreo</th>
                         <!--<th class="col-2"data-tablesaw-sortable-col data-tablesaw-priority="">Acciones</th>-->
          
                           <abbr title="Rotten Tomato Rating"> &nbsp;</abbr>

@@ -133,7 +133,7 @@
 	function obtener_datos_pagina($id_pag){
 		global $connection;
 		$query ="SELECT * FROM paginas
-		WHERE activo=1 AND id=8";
+		WHERE activo=1 AND id=$id_pag";
 		$result = mysqli_query($connection,$query);
 		$ticket = mysqli_fetch_all($result,MYSQLI_ASSOC);
 		return $ticket;
@@ -141,14 +141,15 @@
 	}
 
 	//actualizar datos MYSQL QUERY
-	function actualizar_pagina($url,$nombre_pagina,$tiempo,$creado_por,$actualizado_por,$id_pagina_web){
+	function actualizar_pagina($url,$nombre_pagina,$tiempo,$creado_por,$actualizado_por,$id_pagina_web,$activo){
 		global $connection;
 		$query ="UPDATE paginas SET
 		`url`='$url',
 		nombre='$nombre_pagina',
 		tiempo_revision_pagina='$tiempo',
 		id_creado_por='$creado_por',
-		id_actualizado_por='$actualizado_por'
+		id_actualizado_por='$actualizado_por',
+		activo='$activo'
 		WHERE id='$id_pagina_web'";
 		mysqli_query($connection,$query);
 		//return $result;
